@@ -2,13 +2,8 @@ var Dice = require('./src/dice/Dice');
 var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var { buildSchema } = require('graphql');
-const FakeDice = require('./src/dice/FakeDice');
 
-var fd = new FakeDice(3); 
-
-console.log(fd.hello());
-
-
+const PORT = 4000;
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
@@ -39,5 +34,5 @@ app.use('/graphql', graphqlHTTP({
   graphiql: true,
 }));
 
-app.listen(4000);
-console.log('Running a GraphQL API server at http://localhost:4000/graphql');
+app.listen(PORT);
+console.log(`Running a GraphQL API server at http://localhost:${PORT}/graphql`);

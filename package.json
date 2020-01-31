@@ -1,7 +1,7 @@
 {
-  "name": "dlvnode",
+  "name": "rpgnode",
   "version": "1.0.0",
-  "description": "Node version of dlvbackend with OO",
+  "description": "Node version of d&d with OO",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
@@ -14,5 +14,8 @@
     "express-graphql": "^0.9.0",
     "graphql": "^14.5.8",
     "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.5"
   }
 }
